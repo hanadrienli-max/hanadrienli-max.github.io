@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carrefour Procurement CLI — Han Li 个人采购工具</title>
+<style>body{font:18px/1.7 system-ui,sans-serif;max-width:760px;margin:48px auto;padding:0 24px;color:#17212b}a{color:#075ab7}.draft{padding:12px 16px;background:#fff2cd;border-radius:8px}h1{line-height:1.3}</style>
+</head>
+<body><main>
+<h1>Carrefour Procurement CLI</h1>
+<p>这是 Han Li 使用的个人民宿采购工具，用于准备采购资料、核对订单与建立耗材购买提醒。</p>
+<h2>采购辅助</h2>
+<p>采购组件根据房源退房日期准备采购安排，查询 Carrefour 的订单确认邮件及清洁工照片回复，提取订单编号、时段与照片证据。已授权启用的订单处理可以向指定清洁工转发原订单邮件，并更新私有采购任务系统。付款由用户本人完成；目前相关采购写入保持关闭。</p>
+<h2>购买提醒如何工作</h2>
+<p>工具读取已登记清洁工通过 Telegram 提交的耗材需求，使用 OpenAI API 识别公寓及明确需要购买的物品，再读取该公寓的清洁日历。在下一次清洁日前一天的巴黎时间上午9点，向 Han 的个人日历保存购买任务，并设置开始时弹窗提醒。具体物品写入任务备注。</p>
+<p>同一公寓、同一次清洁的重复反馈会合并；房源不明、已购、否定、语音未能转写或日期不明确的反馈不直接建立任务。工具不会自动下单或付款。</p>
+<h2>Google 授权用途</h2>
+<p>Google 账户邮箱用于核对授权身份，房源日历用于查询和核对清洁日期，个人日历用于保存和核对购买任务。采购组件在已获授权的范围内读取相关 Gmail 邮件及照片附件，用于订单、采购时段与完成证据核对。用户可以在 Google 账户中撤销授权。</p>
+<p><a href="privacy.html">隐私政策</a> · 联系：<a href="mailto:han.adrien.li@gmail.com">han.adrien.li@gmail.com</a></p>
+</main></body>
+</html>
